@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Music Player
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Music Player</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- <app-audio-player></app-audio-player>   -->
+
+  <app-audio-player *ngFor="let song of songs | async" [coverUrl]="song.coverUrl" [songName]="song.songName" [author]="song.author" [songUrl]="song.url"></app-audio-player>  
+
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ingresar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item counter="true">
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input type="email" placeholder="email@domain.com" [(ngModel)]="loginForm.user" maxlength="60"></ion-input>
+    </ion-item>
+  
+    <ion-item counter="true">
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="loginForm.pass" maxlength="20"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col size="10">
+        <ion-button expand="block" (click)="login()">Iniciar sesión</ion-button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>  
+
+</ion-content>
