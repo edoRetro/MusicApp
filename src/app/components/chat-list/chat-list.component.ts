@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
+import { UserDataService } from 'src/app/services/user-data/user-data.service';
 
 @Component({
   selector: 'app-chat-list',
@@ -11,10 +11,10 @@ export class ChatListComponent implements OnInit {
 
   chats: Observable<any[]>;  
 
-  constructor(firestore: AngularFirestore) {
-    this.chats = firestore.collection('chat-list').valueChanges();
-  }
+  constructor(private userDataService: UserDataService) {}
 
-  ngOnInit() {}
+  async ngOnInit() {
+    this.chats = await this.userDataService.getUserChatsPreview();
+  }
 
 }

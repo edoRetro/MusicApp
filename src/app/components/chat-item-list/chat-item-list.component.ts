@@ -6,11 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./chat-item-list.component.scss'],
 })
 export class ChatItemListComponent implements OnInit {
-
-  @Input() avatar = '';
-  @Input() contactName = '';
+  
+  @Input() chatPreviewData;  
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {            
+  }
 }

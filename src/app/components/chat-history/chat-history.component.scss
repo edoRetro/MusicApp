@@ -1,3 +1,26 @@
 :host {
   background-color: white;
 }
+
+ion-title {
+  font-size: 14px;
+  text-align: left;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+ion-footer {
+
+
+  ion-toolbar {
+    height: 42px;
+
+    ion-input {
+      border: 1px solid black;
+      border-radius: 30px;
+      padding: 10px 8px;
+      height: 30px;
+      padding: 6px 14px !important;
+    }
+  }
+}

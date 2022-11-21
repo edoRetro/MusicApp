@@ -1,6 +1,6 @@
-<ion-item button routerLink="chatHistory">
+<ion-item button [routerLink]="['chatHistory', chatPreviewData.chatID, chatPreviewData.receiverName]">
   <ion-thumbnail slot="start">
-    <img alt="Silhouette of mountains" [src]="avatar" />
+    <img alt="Contact avatar" [src]="chatPreviewData.receiverAvatar" />
   </ion-thumbnail>
-  <ion-label>{{ contactName }}</ion-label>
+  <ion-label>{{ chatPreviewData.receiverName }}</ion-label>
 </ion-item>

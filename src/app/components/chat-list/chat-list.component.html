@@ -2,7 +2,7 @@
 
   <ion-list lines="full">
 
-    <app-chat-item-list *ngFor="let chat of chats | async" [avatar]="chat.avatar" [contactName]="chat.contactName"></app-chat-item-list>
+    <app-chat-item-list *ngFor="let chat of chats | async" [chatPreviewData]="chat"></app-chat-item-list>
     
   </ion-list>
 
